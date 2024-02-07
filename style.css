@@ -1,0 +1,226 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, 
+button,
+input,
+select,
+textarea {
+  font-family: 'Heebo', sans-serif;
+}
+
+body {
+  background-color: #f7f7f7 ;
+}
+
+/*NAVBAR*/
+header #navbar {
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+background-color: rgb(146, 187, 214);
+/*padding dar o espaço lateral*/
+/*o rem é igual o px mas melhor pois eh responsivel*/
+padding: 0 2rem;
+/*max-width: 1200px;*/
+/*margin automatico nas laterais para a nav ficar no meio*/
+margin: 0 auto;
+/*alutra do conteudo dentro da navbar*/
+height: 80px;
+
+}
+
+header #navbar .nav-brand {
+  /*tira o anderline dos link*/
+  text-decoration: none;
+  font-size: 1.5 rem;
+  font-weight: 700;
+  color: #333;
+}
+
+header #navbar .nav-list {
+  /*remover bolinhas da lista*/
+  list-style: none;
+  /*para os elementos da lista ficarem lado a lado*/
+  display: flex;
+  align-items: center;
+  gap: 31px;
+
+}
+
+header #navbar .nav-list .nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/*efeito de cores ao passar o mouse pelo os nome*/
+header #navbar .nav-list .nav-item a:hover {
+  color: #777;
+  transition: color 0.3s;
+}
+
+header #navbar .manu {
+  /*não aparecer o elemento */
+  display: none;
+  
+}
+
+@media ( max-width: 740px) {
+  header #navbar .manu {
+  display: block;
+}
+
+header #navbar .nav-list {
+  display: none;
+}
+}
+
+/*sempre colocar no ajuste final da tela*/
+/*responsividade*/
+@media (max-width: 920px) {
+  /*quando diminuir o tamnho, o banner vai pegar o conteudo e transformar em coluna reversa,
+  porem n fica alinhado*/
+  main #banner {
+    flex-direction: column-reverse;
+    /*para alinha o conteudo que está sendo responsivo para menor*/
+    align-items: center;
+    /*para dar o espaço entre os textos*/
+    gap: 2rem;
+
+  }
+
+  main #banner .banner-content {
+    text-align: center;
+  }
+
+}
+
+/*SECTION BANNER*/
+
+main {
+  margin-top: 6rem;
+}
+
+main #banner {
+  /*conteudo um do lado do outro*/
+  display: flex;
+ 
+  /*centralizar o conteudo*/
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  justify-content: space-between;
+
+}
+
+main #banner .banner-content .banner-content-tittle{
+  font-size: 44px;
+  font-weight: 700;
+  /*altura da linha*/
+  line-height: 60px;
+  /*margem entre textos*/
+  margin-bottom: 40px;
+ 
+}
+
+main #banner .banner-content .banner-content-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  /*quebra do texte, definindo tamanho*/
+  margin-bottom: 38px;
+  max-width: 600px;
+}
+
+main #banner .banner-content .button-content-btn {
+  background-color: #00a8cc;
+  color: white;
+  font-size: 20px;
+  border-radius: 2px;
+  padding: 8px 24px;
+  border: none;
+
+}
+
+main #banner .banner-img {
+  border-radius: 50%;
+ width: 100%;
+ max-width: 360px;
+}
+
+/* section post*/
+
+section#posts {
+  margin-top: 71px;
+  background-color: rgb(146, 187, 214);
+  
+}
+
+#posts .posts-content {
+
+padding: 0 2rem;
+max-width: 1200px;
+/*margin automatico nas laterais para a nav ficar no meio*/
+margin: 0 auto;
+
+}
+
+#posts .posts-content .posts-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+  #posts .posts-content .posts-content-header .section-tittle {
+    font-size: 22px;
+    font-weight: 500px;
+  }
+
+  #posts .posts-content .posts-content-header .view-all-link {
+    text-decoration: none;
+  }
+
+  #posts .posts-content .posts-cards {
+    display: flex;
+    gap: 20px;
+    /*margem de baixo, inferior*/
+    margin-bottom: 2rem;
+  }
+
+  #posts .posts-content .posts-cards .post-card {
+    background-color: #f7f7f7;
+    padding: 24px;
+  }
+
+  #posts .posts-content .posts-cards .post-card h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 37px;
+  }
+
+  #posts .posts-content .posts-cards .post-card span {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+
+  /*por padrão, span n pode aceitar espaçamento, mas podemos resolver usando display block*/
+    display: block;
+
+  }
+
+  /*responsividade é feita por bloco*/
+  @media (max-width: 740px) {
+    #posts .posts-content .posts-cards {
+      flex-direction: column;
+    }
+  }
+
+
+
